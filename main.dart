@@ -1,14 +1,58 @@
-import 'fuctions.dart';
+import 'classes.dart';
 
 void main() {
-  // functions
-  // credential(city: 'Udaipur', state: 'Raj', pincode: 313004, name: "Mayank");
-  // check();
-  // check(12);
+  // classes
 
-  contain(5, () => print('found the number'));
+  // print(User().age);
+  // User().printName();
+
+  final userCred = User(name: "Mayank");
+  // final user2 = User(22, "Shreyansh");
+  // userCred.age = 23;
+  print(userCred.age);
+
+  // print(userCred.age);
+  userCred.printName();
 }
+// userName
+// UserName
+// user_name
 
+// class
+
+
+
+
+
+
+
+
+
+
+
+
+// void main() {
+//   // functions
+//   // credential(city: 'Udaipur', state: 'Raj', pincode: 313004, name: "Mayank");
+//   // check();
+//   // check(12);
+
+//   // contain(5, () => print('found the number'));
+
+//   // String? message = welcome('Mayank');
+//   // print(message);
+//   final user = userCreds();
+//   print(user.age);
+//   print(user.name);
+//   print(user.gender);
+// }
+
+// // String? welcome(String? user) => 'Welcome ${user ?? 'some user'}';
+
+// // Records
+// ({String name, int age, String gender}) userCreds() {
+//   return (name: 'Mayank', age: 22, gender: 'male');
+// }
 
 // <return type> <name>() {}
 
