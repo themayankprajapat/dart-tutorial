@@ -1,19 +1,76 @@
-import 'classes.dart';
+// import 'classes.dart';
 
 void main() {
-  // classes
+  // User userCred = User(name: "mayank", age: 22);
+  // print(userCred.country);
+  // userCred.setCountry = 'Spain';
+  // print(userCred.country);
+  // print(userCred.number2);
 
-  // print(User().age);
-  // User().printName();
+  // userCred.number1 = 12;
 
-  final userCred = User(name: "Mayank");
-  // final user2 = User(22, "Shreyansh");
-  // userCred.age = 23;
-  print(userCred.age);
+  // print(userCred.number2);
+  // print(Constants.policy);
+  // int result = Maths.additon(10, 14);
+  // print(user['loggedIn']);
 
-  // print(userCred.age);
-  userCred.printName();
+  int day = snailInWell(18);
+  print(day);
 }
+
+int snailInWell(int depth) {
+  int climb = 7; //in day
+  int slip = 2; //in night
+
+  int position = 0;
+  int day = 0;
+
+  while (position < depth) {
+    day++;
+    position += climb;
+    if (position >= depth) break;
+
+    position -= slip;
+  }
+  return day;
+}
+
+class Constants {
+  static const policy = 'Welcome to the app';
+  static const appName = 'VisionX';
+}
+
+// Map user = {"loggedIn": true, "userName": 'mayank'};
+
+class Maths {
+  static const loggedIn = "loggedIn";
+  static void store(String val) {}
+
+  static int additon(int a, int b) => a + b;
+  static int subtraction(int a, int b) => a - b;
+  static int multiply(int a, int b) => a * b;
+  static double divide(int a, int b) => a / b;
+}
+
+
+
+
+
+
+// void main() {
+//   // classes
+
+//   // print(User().age);
+//   // User().printName();
+
+//   final userCred = User(name: "Mayank");
+//   // final user2 = User(22, "Shreyansh");
+//   // userCred.age = 23;
+//   print(userCred.age);
+
+//   // print(userCred.age);
+//   userCred.printName();
+// }
 // userName
 // UserName
 // user_name
