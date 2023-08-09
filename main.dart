@@ -1,56 +1,137 @@
-// import 'classes.dart';
+import 'classes.dart';
 
 void main() {
-  // User userCred = User(name: "mayank", age: 22);
-  // print(userCred.country);
-  // userCred.setCountry = 'Spain';
-  // print(userCred.country);
-  // print(userCred.number2);
+  // Inheritence
+  // Vehicle car = Car();
 
-  // userCred.number1 = 12;
+  // Bike bike = Bike();
+  // car.getSpeed();
+  // car.accelerate();
+  // car.getSpeed();
 
-  // print(userCred.number2);
-  // print(Constants.policy);
-  // int result = Maths.additon(10, 14);
-  // print(user['loggedIn']);
+  // oop - object oriented programming
+  // polymorphism
+  // Animal animal = Cat();
+  // animal.sound();
+  // animal = Dog();
+  // animal.sound();
+  // abstraction
 
-  int day = snailInWell(18);
-  print(day);
+  // inheritance
+
+  // encapsulation
+
+  User user = User(age: 18, name: "mayank");
+  print(user.country);
 }
 
-int snailInWell(int depth) {
-  int climb = 7; //in day
-  int slip = 2; //in night
-
-  int position = 0;
-  int day = 0;
-
-  while (position < depth) {
-    day++;
-    position += climb;
-    if (position >= depth) break;
-
-    position -= slip;
+class Animal extends SomeClass {
+  void sound() {
+    print('Animal making sound');
   }
-  return day;
 }
 
-class Constants {
-  static const policy = 'Welcome to the app';
-  static const appName = 'VisionX';
+class SomeClass {
+  int number = 10;
 }
 
-// Map user = {"loggedIn": true, "userName": 'mayank'};
-
-class Maths {
-  static const loggedIn = "loggedIn";
-  static void store(String val) {}
-
-  static int additon(int a, int b) => a + b;
-  static int subtraction(int a, int b) => a - b;
-  static int multiply(int a, int b) => a * b;
-  static double divide(int a, int b) => a / b;
+class Cat extends Animal {
+  @override
+  void sound() {
+    print('Cat making sound $number');
+  }
 }
+
+class Dog extends Animal {
+  @override
+  void sound() {
+    print('Dog making sound');
+  }
+}
+
+abstract class Vehicle {
+  void getSpeed();
+  void accelerate();
+}
+
+class Car implements Vehicle {
+  int speed = 40;
+  int wheels = 4;
+
+  @override
+  void getSpeed() {
+    print(speed);
+  }
+
+  @override
+  void accelerate() {
+    speed += 10;
+  }
+}
+
+class Bike extends Vehicle {
+  int speed = 20;
+  int wheels = 2;
+  void getSpeed() => print(speed);
+
+  @override
+  void accelerate() {
+    speed += 20;
+  }
+}
+
+
+// void main() {
+//   // User userCred = User(name: "mayank", age: 22);
+//   // print(userCred.country);
+//   // userCred.setCountry = 'Spain';
+//   // print(userCred.country);
+//   // print(userCred.number2);
+
+//   // userCred.number1 = 12;
+
+//   // print(userCred.number2);
+//   // print(Constants.policy);
+//   // int result = Maths.additon(10, 14);
+//   // print(user['loggedIn']);
+
+//   int day = snailInWell(18);
+//   print(day);
+// }
+
+// int snailInWell(int depth) {
+//   int climb = 7; //in day
+//   int slip = 2; //in night
+
+//   int position = 0;
+//   int day = 0;
+
+//   while (position < depth) {
+//     day++;
+//     position += climb;
+//     if (position >= depth) break;
+
+//     position -= slip;
+//   }
+//   return day;
+// }
+
+// class Constants {
+//   static const policy = 'Welcome to the app';
+//   static const appName = 'VisionX';
+// }
+
+// // Map user = {"loggedIn": true, "userName": 'mayank'};
+
+// class Maths {
+//   static const loggedIn = "loggedIn";
+//   static void store(String val) {}
+
+//   static int additon(int a, int b) => a + b;
+//   static int subtraction(int a, int b) => a - b;
+//   static int multiply(int a, int b) => a * b;
+//   static double divide(int a, int b) => a / b;
+// }
 
 
 
