@@ -22,4 +22,9 @@ class User {
   void printName() {
     print(name);
   }
+
+  @override
+  String toString() {
+    return '$name $age';
+  }
 }
