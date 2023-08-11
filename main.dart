@@ -1,29 +1,76 @@
-// Iterables
-import 'classes.dart';
+enum Subjects {
+  english(1),
+  maths(4),
+  hindi(2),
+  science(3);
+
+  final int classroom;
+  const Subjects(this.classroom);
+
+  // @override
+  // String toString() => this.name[0].toUpperCase() + this.name.substring(1);
+}
+
+class Student {
+  final String name;
+  final Subjects subject;
+
+  Student(this.name, this.subject);
+
+  @override
+  String toString() {
+    return '$name : ${subject.name} : class ${subject.classroom}';
+  }
+}
 
 void main() {
-  List<User> example = [
-    User(age: 16, name: 'name0'),
-    User(age: 18, name: 'name1'),
-    User(age: 20, name: 'name2')
+  List students = [
+    Student('student1', Subjects.science),
+    Student('student2', Subjects.maths),
+    Student('student3', Subjects.hindi),
+    Student('student4', Subjects.english)
   ];
-  print(example);
-  example.clear();
-  // var filter = example.where((element) => element.age >= 18).toList();
-  List mapped = example.map((e) {
-    return e.age >= 18 ? e : 'User is young';
-  }).toList();
-  print(mapped);
+  for (Student e in students) {
+    print(e);
+  }
+
+// Iterables
+  // Map
+
+  // Map<String, String> myMap = {
+  //   "value_1": 'First',
+  //   "value_2": 'Second',
+  // };
+  // print(myMap);
+  // myMap['value_3'] = 'Third var';
+
+  // print(myMap.keys);
+
+  // List myList = [1, 2, 3, 4];
+  // print(myList);
+  // myList[4] = 5;
+  // print(myList);
+
+  // Set
+  // final user = User(age: 16, name: 'name0');
+
+  // List<User> example = [user, user, User(age: 20, name: 'name2')];
+  // Set<User> example = {
+  //   User(age: 16, name: 'name0'),
+  //   User(age: 16, name: 'name0'),
+  //   User(age: 20, name: 'name2')
+  // };
+  // Set mySet = {1, 2, 3};
+
+  // print(example.toSet().toList());
+  // print(mySet);
+  // example.clear();
+  // // var filter = example.where((element) => element.age >= 18).toList();
+  // List mapped = example.map((e) {
+  //   return e.age >= 18 ? e : 'User is young';
+  // }).toList();
+  // print(mapped);
 }
-
-final student = Student('mayank');
-
-class Student<T> {
-  final T name;
-
-  Student(this.name);
-}
-
 
 //  List filter = [];
 //   for (User e in example) {
